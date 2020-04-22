@@ -1,7 +1,7 @@
 {
-  "name": "vue-jstree",
-  "version": "2.1.6",
-  "description": "a tree plugin for vue2",
+  "name": "vue-jstree-vestin",
+  "version": "2.1.7",
+  "description": "a tree plugin for vue2 clone",
   "keywords": [
     "vue2",
     "tree"
