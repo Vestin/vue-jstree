@@ -179,13 +179,19 @@
               if (!!this.allowTransition) {
                   let length = 0
                   let childHeight = 0
+                  console.log(this.model.text,this.model,this.$children)
                   if (this.model.opened) {
                       length = this.$children.length
                       for (let children of this.$children) {
                           childHeight += children.maxHeight
                       }
                   }
+                  // 未知错误，用于解决加入自定义组件后出现的子节点不显示的问题
+                  if(isNaN(childHeight)){
+                      childHeight = 0;
+                  }
                   this.maxHeight = length * this.height + childHeight
+                  console.log(this.maxHeight,length,this.height,childHeight)
                   if (this.$parent.$options._componentTag === 'tree-item') {
                       this.$parent.handleGroupMaxHeight()
                   }

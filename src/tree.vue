@@ -253,7 +253,7 @@
             onItemDrop(e, oriNode, oriItem) {
                 if (!this.draggable || !!oriItem.dropDisabled)
                     return false
-                this.$emit("item-drop-before", oriNode, oriItem, !this.draggedItem ? undefined : this.draggedItem.item, e)
+                this.$emit("item-drop-before", oriNode, oriItem, !this.draggedItem ? undefined : this.draggedItem.item, e, this.draggedItem)
                 if (!this.draggedElm || this.draggedElm === e.target || this.draggedElm.contains(e.target)) {
                     return
                 }

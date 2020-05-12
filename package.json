@@ -1,6 +1,6 @@
 {
   "name": "vue-jstree-vestin",
-  "version": "2.1.7",
+  "version": "2.1.10",
   "description": "a tree plugin for vue2 clone",
   "keywords": [
     "vue2",
@@ -12,7 +12,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zdy1988/vue-jstree.git"
+    "url": "https://github.com/Vestin/vue-jstree.git"
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
@@ -33,6 +33,6 @@
     "vue-loader": "^12.1.0",
     "vue-template-compiler": "^2.3.3",
     "webpack": "^2.6.1",
-    "webpack-dev-server": "^2.4.5"
+    "webpack-dev-server": "^2.11.5"
   }
 }
