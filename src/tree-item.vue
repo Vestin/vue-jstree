@@ -179,10 +179,12 @@
               if (!!this.allowTransition) {
                   let length = 0
                   let childHeight = 0
-                  console.log(this.model.text,this.model,this.$children)
                   if (this.model.opened) {
                       length = this.$children.length
                       for (let children of this.$children) {
+                          if(isNaN(children.maxHeight)){
+                              continue;
+                          }
                           childHeight += children.maxHeight
                       }
                   }
@@ -191,7 +193,6 @@
                       childHeight = 0;
                   }
                   this.maxHeight = length * this.height + childHeight
-                  console.log(this.maxHeight,length,this.height,childHeight)
                   if (this.$parent.$options._componentTag === 'tree-item') {
                       this.$parent.handleGroupMaxHeight()
                   }
